@@ -36,7 +36,6 @@ public class UserServiceImplement implements UserService{
 
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
