@@ -14,7 +14,7 @@ a:link
 .navbar
 {
     position: absolute;
-    padding-top: 40px;
+    padding-top: 30px;
 }
 .nav-button
 {
@@ -54,7 +54,7 @@ p
 }
 #images
 {
-    padding-top: 4%;
+    padding-top: 6%;
     position: relative;
 }
 #img1
