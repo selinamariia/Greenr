@@ -26,15 +26,20 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{ // Disables th
 		.anyRequest().authenticated()
 		.and()
 		.formLogin()
-		.loginPage("/login")
-		.permitAll()
+			.loginPage("/login")
+			.permitAll()
 		.and()
-		.logout()
-		.invalidateHttpSession(true)
-		.clearAuthentication(true)
+		.logout().permitAll()
 		.logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
 		.logoutSuccessUrl("/login?logout")
-		.permitAll();					
+		.and()
+		.rememberMe()
+			.key("privateKey")
+			.tokenValiditySeconds(1 * 24 * 60 * 60)
+		.userDetailsService(userService)
+		;
+//		.invalidateHttpSession(true)
+//		.clearAuthentication(true)	
 	}
 	
 	@Override
