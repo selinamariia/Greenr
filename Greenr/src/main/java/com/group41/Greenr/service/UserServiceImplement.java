@@ -33,7 +33,7 @@ public class UserServiceImplement implements UserService{
 	@Override
 	public User save(UserRegistrationDto registrationDto) {
 		User user = new User(registrationDto.getFirstName(), 
-				registrationDto.getLastName(), registrationDto.getEmail(), 
+				registrationDto.getLastName(), registrationDto.getUsername() ,registrationDto.getEmail(),
 				passwordEncoder.encode(registrationDto.getPassword()), registrationDto.getDoB(), // Changes made to encrypt the user password which is stored in the database
 				Arrays.asList(new Role("ROLE_USER")));
 		
@@ -53,6 +53,12 @@ public class UserServiceImplement implements UserService{
 	private Collection<? extends GrantedAuthority> mapRolesToAuthorities(Collection<Role> roles){
 		
 		return roles.stream().map(role -> new SimpleGrantedAuthority(role.getName())).collect(Collectors.toList()); //Uses stream API - used to process collections of objects
+	}
+
+	@Override
+	public void deleteAccountById(long id) {
+		this.userRepo.deleteById(id);
+		
 	}
 
 }
