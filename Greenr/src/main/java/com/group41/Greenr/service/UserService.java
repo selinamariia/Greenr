@@ -6,6 +6,8 @@ import com.group41.Greenr.model.User;
 import com.group41.Greenr.web.dto.UserRegistrationDto;
 
 public interface UserService extends UserDetailsService{
-	User save(UserRegistrationDto registrionDto);
+	User save(UserRegistrationDto registrationDto);
+	
+	void deleteAccountById(long id);
 
 }
