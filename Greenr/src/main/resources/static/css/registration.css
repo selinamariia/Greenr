@@ -1,21 +1,22 @@
 body
 {
-    background-color: #fff;
+    background-color: #fff9f8;
     position: relative;
 }
 .form-box{
     width: 480px;
-    height: 580px;
+    height: 620px;
     position: relative;
     margin: 6% auto;
     background: #b6c4bb;
     padding: 5px;
+	border-radius: 50px;
 }
 .form-group h1{
 	font-size: 30px;
 	text-align: center;
 	text-transform: uppercase;
-	margin: 40px;
+	margin: 10px;
 }
 .form-group p{  
 	outline: none;
