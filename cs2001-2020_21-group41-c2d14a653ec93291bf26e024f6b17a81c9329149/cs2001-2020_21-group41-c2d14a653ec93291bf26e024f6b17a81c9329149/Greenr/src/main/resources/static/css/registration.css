@@ -1,0 +1,46 @@
+body
+{
+    background-color: #fff9f8;
+    position: relative;
+}
+.form-box{
+    width: 480px;
+    height: 620px;
+    position: relative;
+    margin: 6% auto;
+    background: #b6c4bb;
+    padding: 5px;
+	border-radius: 50px;
+}
+.form-group h1{
+	font-size: 30px;
+	text-align: center;
+	text-transform: uppercase;
+	margin: 10px;
+}
+.form-group p{  
+	outline: none;
+	background: #b6c4bb;
+	border: 0;
+	margin: 0 0 10px;
+	padding: 15px;
+	box-sizing: border-box;
+	font-size: 14px;
+} 
+.form-group input{ 
+	outline: none;
+	border: 0;
+	box-sizing: border-box;
+	font-size: 14px;
+} 
+.form-group button{
+	font-size: 14px;
+	font-weight: bold;
+	margin: 20px 0;
+	padding: 10px 15px;
+	width: 50%;
+	border: 0;
+	border-radius: 5px;
+}
+
+

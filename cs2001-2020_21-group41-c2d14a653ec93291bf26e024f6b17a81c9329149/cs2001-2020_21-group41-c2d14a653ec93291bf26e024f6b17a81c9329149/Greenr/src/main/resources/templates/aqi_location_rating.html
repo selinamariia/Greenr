@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AQI Location Rating</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/aqi.css">
+    <script>
+      document.addEventListener('DOMContentLoaded', function(){
+
+      });
+
+      function getAQI(){
+          const apiKey = '9ca3e675f648207f79b79892efab5b021f38bf6b'
+          let city = document.getElementById("city").value
+          fetch('https://api.waqi.info/feed/' + city + '/?token=' + apiKey)
+          .then(response => response.json())
+          .then(data => {
+              console.log(data)
+              document.getElementById("aqi").innerHTML = data.data.aqi
+          });
+      }
+    </script>
+    <title>api_test</title>
+</head>
+<body>
+<h1><strong>What is Your AQI?</strong></h1>
+<form onsubmit="getAQI(); return false">
+  <input type="text" name="" id="city" placeholder="Type Your City">
+</form>
+  <h2 id="aqi"></h2>
+  <figure>
+  <img src= "https://blogs.lse.ac.uk/usappblog/files/2017/03/Fowler-Fig-1.jpg"/>
+  <figcaption><strong>Purpose:</strong> The AQI above will need to be compared to this table in order to gauge how safe your city's air is and whether there should be any cause for concern</figcaption>
+  </figure>
+</body>
+</html>
