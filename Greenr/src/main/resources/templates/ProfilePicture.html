@@ -43,6 +43,19 @@
 
 
 <script src="app.js"></script>
+  <script>
+    document.querySelector("#file").addEventListener("change", function ()
+        {
+            const reader = new FileReader();
+
+            reader.addEventListener("load", () => 
+            {
+                localStorage.setItem("Profile-Image", reader.result);
+            });
+
+            reader.readAsDataURL(this.files[0]);
+        });  
+</script>
 
 </body>
 </html>
