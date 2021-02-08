@@ -32,6 +32,21 @@ public class MainController {
 	public String profilepage() {
 		return "profile";
 	}
+
+	@GetMapping("/who-we-are") 
+	public String whoweare() {
+		return "who-we-are";
+	}
+	
+	@GetMapping("/faq") 
+	public String faq() {
+		return "faq";
+	}
+	
+	@GetMapping("/welcome-screen") 
+	public String welcomepage() {
+		return "welcome-screen";
+	}
 	
 	@RequestMapping("/deletebyuser")
     public String currentLoggedInUsername(Principal principal) {
