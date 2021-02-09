@@ -4,9 +4,14 @@
     font-family: 'Open Sans', sans-serif;
 }
 body{
-	background: aquamarine;
+	background: rgb(179, 210, 218);
 }
 
 h1{
 	font-family: Jazz LET, fantasy;
+}
+
+.setLeft{
+	float:left;
+	margin-left:20px
 }
