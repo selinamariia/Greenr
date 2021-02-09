@@ -27,7 +27,7 @@
           .then(data => {
               let aqiValue = data.data.aqi  
           _aqiFeed({  
-              display:"%cityname  AQI  is  %aqi (last updated on %date)<br> Your AQI rating is:<span style='%style;'>%impact</span>",
+              display:"%cityname  AQI  is  %aqi (last updated on %date)<br> Your AQI rating is:<span style='%style;'>%impact</span><br><span style='font-size:12px'> Air Quality Information for %cityname is provided by %attribution</span>",
               container:"city-aqi-container",  
               city:city,
               });
@@ -43,10 +43,10 @@
       <input type="text" name="area" id="city" placeholder="Type your city">
       <button type="submit" form="location_form" value="Submit">Get AQI rating</button>
   </form>
-  <p id ="city-aqi-container"><br><br></p>
-  <figure class="setLeft">
-      <img src= "../static/img/aqi_table.png" alt="aqi rating table">
-      <figcaption><strong>Purpose:</strong> The AQI above will need to be compared to this table in order to gauge how safe your city's air is and whether there should be any cause for concern</figcaption>
+  <p id ="city-aqi-container"><br><br><br></p>
+  <figure>
+      <img src= "../static/img/aqi_table.png" alt="aqi rating table" width="950">
+      <figcaption style="font-size: 13px;"><strong>Purpose:</strong> The AQI above will need to be compared to this table in order to gauge how safe your city's air is and whether there should be any cause for concern</figcaption>
   </figure>
   </body>
 </html>

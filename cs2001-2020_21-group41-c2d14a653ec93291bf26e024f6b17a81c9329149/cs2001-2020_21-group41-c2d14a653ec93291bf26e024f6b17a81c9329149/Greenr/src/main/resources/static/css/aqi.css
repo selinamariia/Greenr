@@ -2,16 +2,8 @@
 
 *{
     font-family: 'Open Sans', sans-serif;
+	margin-left:3px
 }
 body{
 	background: rgb(179, 210, 218);
-}
-
-h1{
-	font-family: Jazz LET, fantasy;
-}
-
-.setLeft{
-	float:left;
-	margin-left:20px
 }
