@@ -15,6 +15,8 @@ a:link
 {
     position: absolute;
     padding-top: 30px;
+    padding-left: 55px;
+    
 }
 .nav-button
 {
@@ -29,10 +31,11 @@ a:link
 }
 h1
 {
-    color: #b6c4bb;
+    color: #ffffff;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-shadow: 0.5px, 0.5px, 2px, #adb8b1;
     font-size: 50px;
+    text-align: center;
 }
 .title
 {
