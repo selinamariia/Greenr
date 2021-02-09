@@ -28,7 +28,7 @@
           .then(data => {
               let aqiValue = data.data.aqi  
           _aqiFeed({  
-              display:"%cityname  AQI  is  %aqi (last updated on %date)<br> Your AQI rating is:<span style='%style;'>%impact</span><br><span style='font-size:12px'> Air Quality Information for %cityname is provided by %attribution</span>",
+              display:"%cityname  AQI  is  %aqi (last updated on %date)<br> Your AQI rating is: <span style='%style;'>%impact</span><br><span style='font-size:12px'> Air Quality Information for %cityname is provided by %attribution</span>",
               container:"city-aqi-container",  
               city:city,
               });
@@ -75,20 +75,20 @@
             </div>
           </div>
         
-        <div class="aqi-title">
-          <h1><strong>What is Your AQI?</strong></h1>
-        </div>
-        
-        <div class="aqi-search">
-        <form onsubmit="getAQI(); return false" id="location_form">
+        <h1 class="aqi-title"><strong>What is Your AQI?</strong></h1>
+        <div style="font-size: 17px;" class="center-text">Enter your location: </div>
+        <br><form class="aqi-search" onsubmit="getAQI(); return false" id="location_form">
           <input type="text" name="" id="city" placeholder="Type Your City">
           <button type="submit" form="location_form" value="Submit">Get AQI rating</button>
         </form>
-        </div>
-          <h2 id="city-aqi-container" class="aqi-number"><br><br><br></h2>
+          <h2 id="city-aqi-container" class="aqi-number">
+            <br>
+            <br>
+            <br>
+          </h2>
           <figure>
-            <div class="aqi-image">
-              <img src= "../static/img/aqi_table.png" width="950px"/>
+            <div class="center-image">
+              <img src= "../static/img/aqi_table.png" width="925px"/>
             </div>
             <div class="aqi-purpose">
               <figcaption style="text-align: center;"><strong>Purpose:</strong> The AQI above will need to be compared to this table in order to gauge how safe your city's air is and whether there should be any cause for concern</figcaption>
