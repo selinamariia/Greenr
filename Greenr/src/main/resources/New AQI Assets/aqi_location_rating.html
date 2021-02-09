@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AQI Location Rating</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/aqi.css">
+    <link rel="stylesheet" type="text/css" href="../static/css/faq.css"> 
+    <script>
+      document.addEventListener('DOMContentLoaded', function(){
+
+      });
+
+      function getAQI(){
+          const apiKey = '9ca3e675f648207f79b79892efab5b021f38bf6b'
+          let city = document.getElementById("city").value
+          fetch('https://api.waqi.info/feed/' + city + '/?token=' + apiKey)
+          .then(response => response.json())
+          .then(data => {
+              console.log(data)
+              document.getElementById("aqi").innerHTML = data.data.aqi
+          });
+      }
+    </script>
+    <title>api_test</title>
+</head>
+<body>
+
+  <div id="videowrapper">
+    <div id="fullScreenDiv">
+       <video id="video" role="presentation" preload="auto" playsinline="" crossorigin="anonymous" loop="" muted="" autoplay="" class="blur">
+            <source src="../static/video/windmill.mp4" type="video/webm">
+            <source src="video/t12.mp4" type="video/mp4">
+        </video>
+        <div class="header-overlay"></div> 
+        <div id="videoMessage" class="styling"> 
+          <div class="header">
+            <div class="navbar">
+                <a href="">
+                    <button class="nav-button">Home</button>
+                </a>
+                <a href="">
+                    <button class="nav-button">Community</button>
+                </a>
+                <a href="">
+                    <button class="nav-button">AQI</button>
+                </a>
+                <a th:href="@{/who-we-are}">
+                    <button class="nav-button">About Us</button>
+                </a>
+                <a href="">
+                    <button class="nav-button">Contact Us</button>
+                </a>
+                <a th:href="@{/faq}">
+                    <button class="nav-button">FAQ</button>
+                </a>
+                <a th:href="@{/profile}">
+                    <button class="nav-button">Your Profile</button>
+                </a>
+                <a th:href="@{/logout}">
+                    <button class="nav-button">Logout</button>
+                </a>
+            </div>
+          </div>
+        
+        
+        
+        
+        <div class="aqi-title">
+          <h1><strong>What is Your AQI?</strong></h1>
+        </div>
+        
+        <div class="aqi-search">
+        <form onsubmit="getAQI(); return false">
+          <input type="text" name="" id="city" placeholder="Type Your City">
+        </form>
+        </div>
+          <h2 id="aqi" class="aqi-number"></h2>
+          <figure>
+            <div class="aqi-image">
+              <img src= "https://blogs.lse.ac.uk/usappblog/files/2017/03/Fowler-Fig-1.jpg"/>
+            </div>
+            <div class="aqi-purpose">
+              <figcaption><strong>Purpose:</strong> The AQI above will need to be compared to this table in order to gauge how safe your city's air is and whether there should be any cause for concern</figcaption>
+            </div>
+          </figure>
+        </body>
+        </html>
+        </div>   
+    </div>
+</div>
+
+        
+
+  
