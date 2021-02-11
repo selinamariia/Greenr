@@ -4,6 +4,8 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.stream.Collectors;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -11,6 +13,8 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.group41.Greenr.model.Role;
 import com.group41.Greenr.model.User;
@@ -21,6 +25,9 @@ import com.group41.Greenr.web.dto.UserRegistrationDto;
 public class UserServiceImplement implements UserService{
 
 	private UserRepo userRepo;
+	
+	@Autowired
+	private HttpSession httpSession;
 	
 	public UserServiceImplement(UserRepo userRepo) {
 		super();
@@ -38,7 +45,9 @@ public class UserServiceImplement implements UserService{
 				Arrays.asList(new Role("ROLE_USER")));
 		
 		return userRepo.save(user);
+	
 	}
+	
 
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
@@ -47,6 +56,8 @@ public class UserServiceImplement implements UserService{
 		if(user == null ){
 			throw new UsernameNotFoundException("Invalid Username or Password"); // Throws error message if username/password is incorrect					
 		}
+		httpSession.setAttribute("user", user);
+		
 		return new org.springframework.security.core.userdetails.User(user.getEmail(), user.getPassword(), mapRolesToAuthorities(user.getRoles()));		
 	}
 	
@@ -59,6 +70,15 @@ public class UserServiceImplement implements UserService{
 	public void deleteAccountById(long id) {
 		this.userRepo.deleteById(id);
 		
+	}
+	
+	@Override
+	public User storeFile(MultipartFile file) {
+		String fileName = StringUtils.cleanPath(file.getOriginalFilename());
+//		try {
+//			if (fileName)
+//		}
+		return null;
 	}
 
 }

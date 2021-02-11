@@ -11,8 +11,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
+import javax.persistence.Lob;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 import javax.persistence.UniqueConstraint;
 
 @Entity
@@ -30,6 +32,13 @@ public class User {
 	private String email;
 	private String password;
 	private String DoB;
+	@Column(name="file_name")
+	private String fileName;
+	@Column(name="file_type")
+	private String fileType;
+	
+	@Lob
+	private byte[] data;
 	
 	@ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
 	@JoinTable(
@@ -117,8 +126,39 @@ public class User {
 		this.roles = roles;
 	}	
 	
+	public String getFileName() {
+		return this.fileName;
+	}
+	
+	public void setFileName(String fileName) {
+		this.fileName = fileName;
+	}
 	public User() {
 		
+	}
+
+	public String getFileType() {
+		return fileType;
+	}
+
+	public void setFileType(String fileType) {
+		this.fileType = fileType;
+	}
+
+	public byte[] getData() {
+		return data;
+	}
+
+	public void setData(byte[] data) {
+		this.data = data;
+	}
+	
+	@Transient
+	public String getPhototsImagePath() {
+		if (fileName == null || id == null) {
+			return null;
+		}
+		return "/user-photos/" + id + "/" + fileName;
 	}
 	
 }
