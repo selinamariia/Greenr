@@ -20,13 +20,15 @@
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:main" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="caf986fc-4a65-4e04-aab6-79fa84ee1734" name="Default Changelist" comment="Revert &quot;Revert &quot;Merge branch 'main' of https://github.com/BrunelCS/cs2001-2020_21-group41 into main&quot;&quot;&#10;&#10;This reverts commit aca2c9770b52160050c3486d6e53e38f0f734448.">
-      <change afterPath="$PROJECT_DIR$/Greenr/src/main/resources/static/css/contact-us.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Greenr/src/main/resources/templates/contact-us.html" afterDir="false" />
+    <list default="true" id="caf986fc-4a65-4e04-aab6-79fa84ee1734" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Greenr/src/main/resources/static/css/contact-us.css" beforeDir="false" afterPath="$PROJECT_DIR$/Greenr/src/main/resources/static/css/contact-us.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Greenr/src/main/resources/templates/contact-us.html" beforeDir="false" afterPath="$PROJECT_DIR$/Greenr/src/main/resources/templates/contact-us.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +66,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$/Documents/Brunel/CS2004/Labs/CS2004Lab9" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
@@ -80,8 +82,16 @@
       <workItem from="1611932443498" duration="19000" />
       <workItem from="1612187471824" duration="101000" />
       <workItem from="1612786816567" duration="3000" />
-      <workItem from="1613050825448" duration="189000" />
+      <workItem from="1613050825448" duration="8663000" />
     </task>
+    <task id="LOCAL-00001" summary="Added contact-us.html and contact-us.css">
+      <created>1613051175553</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1613051175553</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -92,24 +102,55 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="Revert &quot;Revert &quot;Merge branch 'main' of https://github.com/BrunelCS/cs2001-2020_21-group41 into main&quot;&quot;&#10;&#10;This reverts commit aca2c9770b52160050c3486d6e53e38f0f734448." />
-    <option name="LAST_COMMIT_MESSAGE" value="Revert &quot;Revert &quot;Merge branch 'main' of https://github.com/BrunelCS/cs2001-2020_21-group41 into main&quot;&quot;&#10;&#10;This reverts commit aca2c9770b52160050c3486d6e53e38f0f734448." />
+    <MESSAGE value="Added contact-us.html and contact-us.css" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added contact-us.html and contact-us.css" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="524" y="267" key="#Notifications" timestamp="1613064916126">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="524" y="267" key="#Notifications/0.0.1280.800@0.0.1280.800" timestamp="1613064916126" />
+    <state x="29" y="0" key="CommitChangelistDialog2" timestamp="1613051175142">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="29" y="0" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1613051175142" />
     <state x="949" y="190" key="FileChooserDialogImpl" timestamp="1612187571453">
       <screen x="62" y="0" width="1474" height="864" />
     </state>
     <state x="949" y="190" key="FileChooserDialogImpl/62.0.1474.864@62.0.1474.864" timestamp="1612187571453" />
-    <state x="149" y="36" key="SettingsEditor" timestamp="1613050835354">
+    <state x="155" y="30" key="SettingsEditor" timestamp="1613064098941">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="149" y="36" key="SettingsEditor/0.0.1280.800@0.0.1280.800" timestamp="1613050835354" />
+    <state x="155" y="30" key="SettingsEditor/0.0.1280.800@0.0.1280.800" timestamp="1613064098941" />
+    <state x="267" y="93" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1613064507482">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="267" y="93" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1280.800@0.0.1280.800" timestamp="1613064507482" />
+    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup" timestamp="1613076617861">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="305" y="124" width="670" height="676" key="search.everywhere.popup/0.0.1280.800@0.0.1280.800" timestamp="1613076617861" />
   </component>
 </project>
