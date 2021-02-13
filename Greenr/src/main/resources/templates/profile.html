@@ -23,7 +23,7 @@
                 <a href="">
                     <button class="nav-button">Community</button>
                 </a>
-                <a href="">
+                <a th:href="@{/aqi_location_rating}">
                     <button class="nav-button">AQI</button>
                 </a>
                 <a th:href="@{/who-we-are}">
@@ -45,6 +45,41 @@
             
             <div class="title">
                 <h1>My Profile</h1>
+				<form action="#" th:action="@{/save}" th:object="${userprofile}"
+              		method="post">
+                	<h2>Edit Details</h2>
+
+                	<h3 class = >User ID</h3>
+                	<input type="text" th:field="*{id}" readonly="readonly" />
+
+                	<h3 class = >Username</h3>
+                	<input type="text" th:field="*{username}" />
+
+                	<h3 class = >First name</h3>
+                	<input type="text" th:field="*{firstName}" />
+
+                	<h3 class = "First">Last name</h3>
+                	<input type="text" th:field="*{lastName}" />
+
+                	<input type="hidden" th:field="*{password}" readonly="readonly" />
+
+                	<h3 class = "First">Date Of Birth</h3>
+                	<input type="text" th:field="*{DoB}" />
+					  
+                	<h3 class = "First">Email Address</h3>
+                	<input type="email" th:field="*{email}" readonly="readonly" />  
+                	
+                	<button class="btn" type="submit">Apply changes</button>            	 
+                	
+                    <th:block th:each="role : ${listRoles}">
+                    <div>
+                    <input type="hidden" th:field="*{roles}" th:text="${role.name}" th:value="${role.id}"  />
+                    </div>
+                    </th:block>
+                    
+                    
+				</form>
+
             </div>
 
             <div class="profile-card">
