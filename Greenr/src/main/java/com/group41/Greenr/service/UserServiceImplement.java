@@ -72,6 +72,12 @@ public class UserServiceImplement implements UserService{
 		
 	}
 	
+	public void saveuser(User user) {
+
+        passwordEncoder.encode(user.getPassword());
+        userRepo.save(user);
+    }
+	
 	@Override
 	public User storeFile(MultipartFile file) {
 		String fileName = StringUtils.cleanPath(file.getOriginalFilename());

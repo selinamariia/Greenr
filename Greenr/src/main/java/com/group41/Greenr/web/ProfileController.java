@@ -55,8 +55,13 @@ public class ProfileController {
         return "profile";
     }
 
+	@PostMapping("/save")
+    public String saveUser(@ModelAttribute("user") User user) {
 
-	
+        userServiceImplement.saveuser(user);
+        return "redirect:/profile";
+    }
+
 	
 //	// @PostMapping is used to handle POST type of request method
 //	@PostMapping
