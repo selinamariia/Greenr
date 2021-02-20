@@ -37,7 +37,7 @@ public class MainController {
 			return "login";
 		}
 		
-		return "redirect:/faq";
+		return "redirect:/registration";
 	}
 	
 //	@GetMapping("/profile") 
@@ -65,6 +65,7 @@ public class MainController {
         String email = principal.getName();
         Long userID= userRepo.findByEmail(email).getId();
         userRepo.deleteById(userID);
+        SecurityContextHolder.clearContext();
         return "redirect:/login";
     }
 	
