@@ -1,3 +1,8 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
 .navbar
 {
     padding-top: 30px;
@@ -5,7 +10,7 @@
 }
 .nav-button
 {
-    background-color: #b6c4bb; /* Green */
+    background-color: #b6c4bb;
     border: none;
     padding: 10px 32px;
     color: #fff9f8;
@@ -13,5 +18,50 @@
     font-size: 20px;
     font-weight: bold;
     margin-left: 50px;
+}
+.contact-us-content{
+    text-align: center;
+    size: auto;
+    background-color: #d6e2e9;
+
+}
+.contact-title{
+    padding-top: 10px;
+    color: #303030;
+}
+.contact-title h1{
+    font-size: 35px;
+    font-weight: normal;
+}
+.contact-title h2{
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+form{
+    margin-top: 50px;
+}
+input{
+    height: 35px;
+}
+.form-control{
+    width: 600px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid gray;
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 16px;
+
+}
+form .submit {
+    background-color: #bcd4e6;
+    border-radius: 5px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+form .submit:hover{
+    background-color: #99c1de;
 }
 

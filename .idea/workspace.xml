@@ -26,14 +26,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="caf986fc-4a65-4e04-aab6-79fa84ee1734" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Greenr/src/main/resources/static/img/business.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Greenr/src/main/resources/static/img/customer-support.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Greenr/src/main/resources/static/img/email.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Greenr/src/main/resources/static/css/contact-us.css" beforeDir="false" afterPath="$PROJECT_DIR$/Greenr/src/main/resources/static/css/contact-us.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Greenr/src/main/resources/static/img/businessenquiries.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Greenr/src/main/resources/static/img/customersupport.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Greenr/src/main/resources/static/img/newsletter.jpeg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Greenr/src/main/resources/templates/contact-us.html" beforeDir="false" afterPath="$PROJECT_DIR$/Greenr/src/main/resources/templates/contact-us.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -94,7 +88,7 @@
       <workItem from="1612786816567" duration="3000" />
       <workItem from="1613050825448" duration="9111000" />
       <workItem from="1613146315931" duration="140000" />
-      <workItem from="1614168304830" duration="2956000" />
+      <workItem from="1614168304830" duration="8736000" />
     </task>
     <task id="LOCAL-00001" summary="Added contact-us.html and contact-us.css">
       <created>1613051175553</created>
@@ -110,7 +104,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613079347805</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Small changes to content and style of contact page">
+      <created>1614185821978</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1614185821978</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,17 +136,18 @@
     <MESSAGE value="Revert &quot;Revert &quot;Merge branch 'main' of https://github.com/BrunelCS/cs2001-2020_21-group41 into main&quot;&quot;&#10;&#10;This reverts commit aca2c9770b52160050c3486d6e53e38f0f734448." />
     <MESSAGE value="Added contact-us.html and contact-us.css" />
     <MESSAGE value="Added content and style to contact page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added content and style to contact page" />
+    <MESSAGE value="Small changes to content and style of contact page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Small changes to content and style of contact page" />
   </component>
   <component name="WindowStateProjectService">
     <state x="524" y="267" key="#Notifications" timestamp="1613064916126">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="524" y="267" key="#Notifications/0.0.1280.800@0.0.1280.800" timestamp="1613064916126" />
-    <state x="29" y="0" key="CommitChangelistDialog2" timestamp="1613079347526">
+    <state x="29" y="0" key="CommitChangelistDialog2" timestamp="1614185821472">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="29" y="0" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1613079347526" />
+    <state x="29" y="0" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1614185821472" />
     <state x="949" y="190" key="FileChooserDialogImpl" timestamp="1612187571453">
       <screen x="62" y="0" width="1474" height="864" />
     </state>
