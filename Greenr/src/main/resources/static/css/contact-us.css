@@ -63,5 +63,6 @@ form .submit {
 }
 form .submit:hover{
     background-color: #99c1de;
+    cursor: pointer;
 }
 
