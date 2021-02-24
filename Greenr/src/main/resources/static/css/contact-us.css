@@ -1,6 +1,5 @@
 .navbar
 {
-    position: absolute;
     padding-top: 30px;
     margin: 10px;
 }
@@ -16,15 +15,3 @@
     margin-left: 50px;
 }
 
-section {
-    background-color: #b6c4bb;
-    padding: 15px;
-    margin: 10px;
-    width: 300px;
-    height: 300px;
-    float: left;
-}
-
-h3{
-    alignment: center;
-}
