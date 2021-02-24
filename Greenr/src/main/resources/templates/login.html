@@ -22,6 +22,7 @@
 				<form th:action="@{/login}" method="post">
 					
 					<!-- error message -->
+					<div class="boxed">
 					<div th:if="${param.error}">
 						<div class="error">Invalid username or
 							password.</div>
@@ -30,6 +31,7 @@
 					<!-- Logout message -->
 					<div th:if="${param.logout}">
 						<div class="logout alert">You have been logged out.</div>
+					</div>
 					</div>
 				
 					<div>
@@ -56,8 +58,8 @@
 					</div>
 				</form>
 
-						<span>New user? <a href="/" th:href="@{/registration}">Register
-								here</a></span>
+						<span>Don't have an account? <a href="/" th:href="@{/registration}"> 
+							Sign up </a></span>
 				</div>
 				</div>
 			</div>
