@@ -26,6 +26,11 @@
 						<div class="error">Invalid username or
 							password.</div>
 					</div>
+					
+					<!-- Logout message -->
+					<div th:if="${param.logout}">
+						<div class="logout alert">You have been logged out.</div>
+					</div>
 				
 					<div>
 						<label for ="username"> Username: </label> 
