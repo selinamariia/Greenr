@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AQI Location Rating</title>
+    <script>
+      document.addEventListener('DOMContentLoaded', function(){
+
+      });
+
+      function getAQI(){
+          const apiKey = '9ca3e675f648207f79b79892efab5b021f38bf6b'
+          let city = document.getElementById("city").value
+          fetch('https://api.waqi.info/feed/' + city + '/?token=' + apiKey)
+          .then(response => response.json())
+          .then(data => {
+              console.log(data)
+              document.getElementById("aqi").innerHTML = data.data.aqi
+          });
+      }
+    </script>
+    <title>api_test</title>
+</head>
+<body>
+<form onsubmit="getAQI(); return false">
+  <input type="text" name="" id="city">
+</form>
+  <h1 id="aqi"></h1>
+</body>
+</html>

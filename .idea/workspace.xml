@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="caf986fc-4a65-4e04-aab6-79fa84ee1734" name="Default Changelist" comment="Revert &quot;Revert &quot;Merge branch 'main' of https://github.com/BrunelCS/cs2001-2020_21-group41 into main&quot;&quot;&#10;&#10;This reverts commit aca2c9770b52160050c3486d6e53e38f0f734448.">
-      <change beforePath="$PROJECT_DIR$/Greenr/src/main/resources/static/faq.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Greenr/src/main/resources/static/who-we-are.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +28,13 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Documents/Brunel/CS2004/Labs/CS2004Lab9" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Documents/Brunel/CS2004/Labs/CS2004Lab10" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -42,6 +47,9 @@
       <workItem from="1611932443498" duration="19000" />
       <workItem from="1612187471824" duration="101000" />
       <workItem from="1612786816567" duration="3000" />
+      <workItem from="1612790000646" duration="313000" />
+      <workItem from="1612793913399" duration="651000" />
+      <workItem from="1612881855603" duration="65000" />
     </task>
     <servers />
   </component>
@@ -53,9 +61,9 @@
     <option name="LAST_COMMIT_MESSAGE" value="Revert &quot;Revert &quot;Merge branch 'main' of https://github.com/BrunelCS/cs2001-2020_21-group41 into main&quot;&quot;&#10;&#10;This reverts commit aca2c9770b52160050c3486d6e53e38f0f734448." />
   </component>
   <component name="WindowStateProjectService">
-    <state x="949" y="190" key="FileChooserDialogImpl" timestamp="1612187571453">
+    <state x="949" y="190" key="FileChooserDialogImpl" timestamp="1612881918986">
       <screen x="62" y="0" width="1474" height="864" />
     </state>
-    <state x="949" y="190" key="FileChooserDialogImpl/62.0.1474.864@62.0.1474.864" timestamp="1612187571453" />
+    <state x="949" y="190" key="FileChooserDialogImpl/62.0.1474.864@62.0.1474.864" timestamp="1612881918986" />
   </component>
 </project>
