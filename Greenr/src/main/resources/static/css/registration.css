@@ -5,7 +5,7 @@ body
 }
 .form-box{
     width: 460px;
-    height: 700px;
+    height: 710px;
     position: relative;
     margin: 6% auto;
     background: #b6c4bb;
@@ -49,6 +49,13 @@ body
 }
 .success{
     color: black;
-    text-decoration: underline;
+	font-weight: bold;
+}
+.boxed {
+	position: center;
+	margin: 10px 110px;
+	padding: 0;
+  	border: 2px solid black;
+  	box-sizing: border-box;
 }
 
