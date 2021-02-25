@@ -1,16 +1,21 @@
 package com.group41.Greenr.web;
 
+import java.io.IOException;
 import java.security.Principal;
 
+import javax.mail.MessagingException;
+import javax.mail.internet.AddressException;
+
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.mail.SimpleMailMessage;
+import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 
+//import com.group41.Greenr.model.EmailApplication;
 import com.group41.Greenr.model.User;
 import com.group41.Greenr.repository.UserRepo;
 import com.group41.Greenr.service.UserService;
@@ -20,7 +25,8 @@ import com.group41.Greenr.service.UserServiceImplement;
 @Controller
 //@RequestMapping("/profile")
 public class ProfileController {
-	
+	@Autowired
+    private JavaMailSender javaMailSender;
 	private UserService userService;
 	@Autowired
 	private UserRepo userRepo;
@@ -56,13 +62,24 @@ public class ProfileController {
     }
 
 	@PostMapping("/save")
-    public String saveUser(@ModelAttribute("user") User user) {
-
+    public String saveUser(@ModelAttribute("user") User user, Principal principal) throws AddressException, MessagingException, IOException 
+	{
         userServiceImplement.saveuser(user);
-        return "redirect:/profile";
-    }
-
+	    String email = principal.getName();
+		sendEmail(email);
+	    return "redirect:/profile";
+	}
 	
+	public void sendEmail(String email) {
+        SimpleMailMessage msg = new SimpleMailMessage();
+        //this needs to be replaced with the users email that needs to be acc
+        msg.setTo(email);
+
+        msg.setSubject("Greenr Profile Changes Saved");
+        msg.setText("Hello! Your profile has been changed on Greenr. To view changes please login to your account. -Greenr Team");
+
+        javaMailSender.send(msg);
+    }
 //	// @PostMapping is used to handle POST type of request method
 //	@PostMapping
 //	public String registerUserAccount(@ModelAttribute("user") UserRegistrationDto registrationDto) {
