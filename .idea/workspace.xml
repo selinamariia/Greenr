@@ -26,10 +26,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="caf986fc-4a65-4e04-aab6-79fa84ee1734" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Greenr/src/main/resources/templates/contact-us.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Greenr/src/main/resources/static/css/contact-us.css" beforeDir="false" afterPath="$PROJECT_DIR$/Greenr/src/main/resources/static/css/contact-us.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Greenr/src/main/resources/templates/contact-us.html" beforeDir="false" afterPath="$PROJECT_DIR$/Greenr/src/main/resources/templates/contact-us.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Greenr/src/main/resources/templates/contact-us.php" beforeDir="false" afterPath="$PROJECT_DIR$/Greenr/src/main/resources/templates/contact-us.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +92,8 @@
       <workItem from="1613050825448" duration="9111000" />
       <workItem from="1613146315931" duration="140000" />
       <workItem from="1614168304830" duration="9215000" />
-      <workItem from="1614192692516" duration="1519000" />
+      <workItem from="1614192692516" duration="1642000" />
+      <workItem from="1614252059949" duration="1467000" />
     </task>
     <task id="LOCAL-00001" summary="Added contact-us.html and contact-us.css">
       <created>1613051175553</created>
@@ -123,7 +123,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614192351301</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="PHP code for the email webform.">
+      <created>1614194321477</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1614194321477</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,17 +157,26 @@
     <MESSAGE value="Added content and style to contact page" />
     <MESSAGE value="Small changes to content and style of contact page" />
     <MESSAGE value="Created webform for contact page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created webform for contact page" />
+    <MESSAGE value="PHP code for the email webform." />
+    <option name="LAST_COMMIT_MESSAGE" value="PHP code for the email webform." />
   </component>
   <component name="WindowStateProjectService">
+    <state x="0" y="0" key="#CLI_Interpreters" timestamp="1614194282526">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="0" y="0" key="#CLI_Interpreters/0.0.1280.800@0.0.1280.800" timestamp="1614194282526" />
     <state x="524" y="267" key="#Notifications" timestamp="1613064916126">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="524" y="267" key="#Notifications/0.0.1280.800@0.0.1280.800" timestamp="1613064916126" />
-    <state x="29" y="0" key="CommitChangelistDialog2" timestamp="1614192350984">
+    <state x="314" y="47" key="#PHP" timestamp="1614194288706">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="29" y="0" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1614192350983" />
+    <state x="314" y="47" key="#PHP/0.0.1280.800@0.0.1280.800" timestamp="1614194288706" />
+    <state x="29" y="0" key="CommitChangelistDialog2" timestamp="1614194321150">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="29" y="0" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1614194321150" />
     <state x="949" y="190" key="FileChooserDialogImpl" timestamp="1612187571453">
       <screen x="62" y="0" width="1474" height="864" />
     </state>
