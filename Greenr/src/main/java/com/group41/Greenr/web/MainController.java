@@ -40,10 +40,6 @@ public class MainController {
 		return "redirect:/registration";
 	}
 	
-//	@GetMapping("/profile") 
-//	public String profilepage() {
-//		return "profile";
-//	}
 
 	@GetMapping("/who-we-are") 
 	public String whoweare() {
@@ -53,6 +49,11 @@ public class MainController {
 	@GetMapping("/faq") 
 	public String faq() {
 		return "faq";
+	}
+	
+	@GetMapping("/aqi")
+	public String aqi() {
+		return "aqi_location_rating";
 	}
 	
 	@GetMapping("/welcome-screen") 
