@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
@@ -23,29 +23,69 @@
                 <a href="">
                     <button class="nav-button">Community</button>
                 </a>
-                <a href="">
+                <a th:href="@{/aqi}">
                     <button class="nav-button">AQI</button>
                 </a>
-                <a href="./who-we-are.html">
+                <a th:href="@{/who-we-are}">
                     <button class="nav-button">About Us</button>
                 </a>
                 <a href="">
                     <button class="nav-button">Contact Us</button>
                 </a>
-                <a href="./faq.html">
+                <a th:href="@{/faq}">
                     <button class="nav-button">FAQ</button>
                 </a>
-                <a href="">
+                <a th:href="@{/profile}">
                     <button class="nav-button">Your Profile</button>
+                </a>
+                <a th:href="@{/logout}">
+                    <button class="nav-button">Logout</button>
                 </a>
             </div>
             
             <div class="title">
                 <h1>My Profile</h1>
+				<form action="#" th:action="@{/save}" th:object="${userprofile}"
+              		method="post">
+                	<h2>Edit Details</h2>
+
+                	<h3 class = >User ID</h3>
+                	<input type="text" th:field="*{id}" readonly="readonly" />
+
+                	<h3 class = >Username</h3>
+                	<input type="text" th:field="*{username}" />
+
+                	<h3 class = >First name</h3>
+                	<input type="text" th:field="*{firstName}" />
+
+                	<h3 class = "First">Last name</h3>
+                	<input type="text" th:field="*{lastName}" />
+
+                	<input type="hidden" th:field="*{password}" readonly="readonly" />
+
+                	<h3 class = "First">Date Of Birth</h3>
+                	<input type="text" th:field="*{DoB}" />
+					  
+                	<h3 class = "First">Email Address</h3>
+                	<input type="email" th:field="*{email}" readonly="readonly" />  
+                	
+                	<button class="btn" type="submit">Apply changes</button>            	 
+                	
+                    <th:block th:each="role : ${listRoles}">
+                    <div>
+                    <input type="hidden" th:field="*{roles}" th:text="${role.name}" th:value="${role.id}"  />
+                    </div>
+                    </th:block>
+                    
+                    
+				</form>
+
             </div>
 
             <div class="profile-card">
                 <div class="image-container">
+                	<!-- <img th:src="@{/user-photos/4/image.jpg}" /> -->
+                	<!-- <img th:src="@{${user.id}}"/> -->
                     <img src="./img/blankprofile.jpg" style="width: 100%">
                     <div class="profile-title">
                         <h3>John Doe</h3>
@@ -60,7 +100,16 @@
 				<form class="textbox" th:action="@{/deletebyuser}" method="POST">
 					<input type="submit" name="button1" value="Delete Account">
 				</form>
-                        <hr>
+				
+				<form id = "singleUploadForm" name="singleUploadForm">
+						<input id="singleFileUploadInput" type="file" name="file" accept="image/png, image/jpeg" class="file-input" required/>
+						<button type = "submit" class="primary submit-btn">Upload Photo</button>
+				</form>
+				<div class="upload-response">
+					<div id="singleFileUploadError"></div>
+					<div id="singleFileUploadSuccess"></div>
+				</div>
+				        <hr>
                         <h3><b>Recently Spotted</b></h3>
                         <p> Alex Shaw</p>
                         <p> Emma Dior</p>
@@ -83,19 +132,10 @@
                             <div class="progress-bar" style="width: 80%">80%
 
                             </div>
-
                         </div>
-
-    
                     </div>
-
              </div>
-
-
-
-
-
-
             </div>
+            <script src="/js/app.js"></script>
     </body>
 </html>

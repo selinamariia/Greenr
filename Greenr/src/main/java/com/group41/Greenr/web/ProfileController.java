@@ -74,7 +74,6 @@ public class ProfileController {
         SimpleMailMessage msg = new SimpleMailMessage();
         //this needs to be replaced with the users email that needs to be acc
         msg.setTo(email);
-
         msg.setSubject("Greenr Profile Changes Saved");
         msg.setText("Hello! Your profile has been changed on Greenr. To view changes please login to your account. -Greenr Team");
 
