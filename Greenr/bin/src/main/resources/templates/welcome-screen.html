@@ -7,15 +7,15 @@
   initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible"
   content="ie=edge">
-  <title>Upload Photo Like FB DP</title>
-  <link rel="stylesheet" href="../static/css/welcome-screen.css">
+  <title>Welcome to Greenr!</title>
+  <link rel="stylesheet" href="css/welcome-screen.css">
 </head>
 <body>
     
     <header class="v-header container">
         
         <div class="fullscreen-video-wrap">
-          <video src="../static/video/intro-main.mp4"
+          <video src="video/intro-main.mp4"
           autoplay="true"
           loop="true">
         </video>
@@ -26,7 +26,8 @@
       <h2>Welcome to Greenr</h2>
       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id temporibus perferendis necessitatibus numquam amet impedit explicabo? Debitis quasi ullam aperiam!</p>
       
-      <a href="./login.html">
+
+      <a th:href="@{/profile}">
         <button class="nav-button">Get Started</button>
     </a>
     </div>
