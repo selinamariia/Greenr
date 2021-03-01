@@ -2,7 +2,7 @@
 <html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" xmlns:th="http://www.thymeleaf.org">
 
 <head>
-	<title>posts</title>
+	<title>Community</title>
 	<meta charset="ISO-8859-1">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="css/bootstrap.css" rel="stylesheet">
@@ -63,12 +63,37 @@
 				</thead>
 				<tbody>
 					<tr th:each="post : ${posts}">
-						<td>[[*{post.postName}]]</td>
-						<td>[[*{post.postDesc}]]</td>
+						<td style="word-wrap: break-word;max-width: 160px;">[[*{post.postName}]]</td>
+						<td style="word-wrap: break-word;max-width: 1200px;">[[*{post.postDesc}]]</td>
 						<td scope="row"><img alt="" th:src="*{'data:image/jpeg;base64,'+{post.image}}"
 								style="width: 125px; height: 125px;"></td>
 						<td>
 							<div class="col text-center">
+								<button type="button" class="btn btn-primary btn-sm mt-2" data-bs-toggle="modal"
+									th:attr="data-bs-target='#viewPostModal'+*{post.postID}">
+									View post</button>
+								<!-- Modal -->
+								<div class="modal fade" th:id="*{'viewPostModal'+{post.postID}}" tabindex="-1"
+									aria-labelledby="viewPostModalLabel" aria-hidden="true">
+									<div class="modal-dialog modal-dialog-centered modal-xl modal-dialog-scrollable">
+										<div class="modal-content">
+											<div class="modal-header text-center">
+												<h5 class="modal-title w-100" id="viewPostModalLabel">
+													[[*{post.postName}]]
+												</h5>
+												<button type="button" class="btn-close" data-bs-dismiss="modal"
+													aria-label="Close"></button>
+											</div>
+											<div class="modal-body" style="word-wrap:break-word;max-width: 100%;">
+												<img th:src="*{'data:image/jpeg;base64,'+{post.image}}"
+													id="imagepreview" style="max-width: 100%; height: auto;">
+												<hr>
+													<p class="text-xl-start">[[*{post.postDesc}]]</p>
+												<br>
+											</div>
+										</div>
+									</div>
+								</div>
 								<button type="button" class="btn btn-success btn-sm mt-2" data-bs-toggle="modal"
 									th:attr="data-bs-target='#titleModal'+*{post.postID}">
 									Edit title</button>
@@ -144,8 +169,8 @@
 														<input type="hidden" th:value="*{post.postID}"
 															class="form-control" name="id">
 														<a th:href="@{/deletePost/{id}(id=${post.postID})}"
-															class="btn btn-danger btn-sm mt-3">Delete post</a>
-														<button type="button" class="btn btn-secondary btn-sm mt-3"
+															class="btn btn-danger btn mt-3">Delete post</a>
+														<button type="button" class="btn btn-secondary btn mt-3"
 															data-bs-dismiss="modal">Cancel</button>
 													</div>
 												</form>
