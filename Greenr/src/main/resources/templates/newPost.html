@@ -9,7 +9,35 @@
 
 </head>
 <body>
-
+            <div class="navbar">
+                <a href="">
+                    <button class="nav-button">Home</button>
+                </a>
+                <a th:href="@{/community}">
+                    <button class="nav-button">Community</button>
+                </a>
+                <a th:href="@{/aqi}">
+                    <button class="nav-button">AQI</button>
+                </a>
+                <a th:href="@{/who-we-are}">
+                    <button class="nav-button">About Us</button>
+                </a>
+                <a th:href="@{/contact-us}">
+                    <button class="nav-button">Contact Us</button>
+                </a>
+                <a th:href="@{/faq}">
+                    <button class="nav-button">FAQ</button>
+                </a>
+                <a th:href="@{/profile}">
+                    <button class="nav-button">Your Profile</button>
+                </a>
+                <a th:href="@{/newPost}">
+                    <button class="nav-button">Create Post</button>
+                </a>                
+                <a th:href="@{/logout}">
+                    <button class="nav-button">Logout</button>
+                </a>
+            </div>
 	<div>
 		<div class="col-12">
 			<nav class="navbar navbar-expand-sm  navbar-light"
@@ -28,7 +56,7 @@
 				<div class="col-sm-6 mx-auto">
 					<div class="card">
 						<div class="card-body">
-							<form action="/addPost" method="Post"
+							<form th:action="@{/addPost}" method="Post"
 								enctype="multipart/form-data">
 								<div class="form-group">
 									<label for="title">Post title</label> <input type="text"
