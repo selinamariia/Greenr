@@ -29,7 +29,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{ // Disables th
 			.loginPage("/login")
 	
 			.permitAll()
-			.defaultSuccessUrl("/profile", true)
+			.defaultSuccessUrl("/welcome-screen", true)
 		.and()
 		.logout().permitAll()
 		.logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
