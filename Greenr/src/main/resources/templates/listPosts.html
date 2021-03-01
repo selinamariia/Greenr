@@ -69,15 +69,15 @@
 						<td>
 							<div class="col text-center">
 								<button type="button" class="btn btn-success btn-sm mt-2" data-bs-toggle="modal"
-									th:attr="data-bs-target='#exampleModal'+*{post.postID}">
+									th:attr="data-bs-target='#titleModal'+*{post.postID}">
 									Edit title</button>
 								<!-- Modal -->
-								<div class="modal fade" th:id="*{'exampleModal'+{post.postID}}" tabindex="-1"
-									aria-labelledby="exampleModalLabel" aria-hidden="true">
+								<div class="modal fade" th:id="*{'titleModal'+{post.postID}}" tabindex="-1"
+									aria-labelledby="titleModalLabel" aria-hidden="true">
 									<div class="modal-dialog modal-dialog-centered">
 										<div class="modal-content">
 											<div class="modal-header">
-												<h5 class="modal-title" id="exampleModalLabel">Edit post title</h5>
+												<h5 class="modal-title" id="titleModalLabel">Edit post title</h5>
 												<button type="button" class="btn-close" data-bs-dismiss="modal"
 													aria-label="Close"></button>
 											</div>
@@ -96,15 +96,15 @@
 									</div>
 								</div>
 								<button type="button" class="btn btn-success btn-sm mt-2" data-bs-toggle="modal"
-									th:attr="data-bs-target='#exampleModal1'+*{post.postID}">
+									th:attr="data-bs-target='#descModal'+*{post.postID}">
 									Edit description</button>
 								<!-- Modal -->
-								<div class="modal fade" th:id="*{'exampleModal1'+{post.postID}}" tabindex="-1"
-									aria-labelledby="exampleModal1Label" aria-hidden="true">
+								<div class="modal fade" th:id="*{'descModal'+{post.postID}}" tabindex="-1"
+									aria-labelledby="descModalLabel" aria-hidden="true">
 									<div class="modal-dialog modal-dialog-centered">
 										<div class="modal-content">
 											<div class="modal-header">
-												<h5 class="modal-title" id="exampleModal1Label">Edit
+												<h5 class="modal-title" id="descModalLabel">Edit
 													description</h5>
 												<button type="button" class="btn-close" data-bs-dismiss="modal"
 													aria-label="Close"></button>
