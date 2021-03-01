@@ -1,0 +1,5 @@
+.banner-wrap{
+    background: url(../img/postBG.jpg) 0 0 no-repeat;
+    overflow-x: hidden;
+    background-size: cover;
+}
