@@ -26,7 +26,7 @@ import com.group41.Greenr.service.UserServiceImplement;
 //@RequestMapping("/profile")
 public class ProfileController {
 	@Autowired
-    private static JavaMailSender javaMailSender;
+    private JavaMailSender javaMailSender;
 	private UserService userService;
 	@Autowired
 	private UserRepo userRepo;
@@ -71,7 +71,7 @@ public class ProfileController {
 	    return "redirect:/profile";
 	}
 	
-	public static String sendEmail(String email) {
+	public void sendEmail(String email) {
         SimpleMailMessage msg = new SimpleMailMessage();
         //this needs to be replaced with the users email that needs to be acc
         msg.setTo(email);
@@ -84,7 +84,6 @@ public class ProfileController {
         javaMailSender.send(msg);
         
         //for testing purposes
-        return "Success";
     }
 //	// @PostMapping is used to handle POST type of request method
 //	@PostMapping
