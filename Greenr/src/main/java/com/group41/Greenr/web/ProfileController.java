@@ -84,6 +84,7 @@ public class ProfileController {
         javaMailSender.send(msg);
         
         //for testing purposes
+//        return "Success";
     }
 //	// @PostMapping is used to handle POST type of request method
 //	@PostMapping

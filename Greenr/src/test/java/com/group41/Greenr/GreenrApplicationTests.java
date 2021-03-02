@@ -20,5 +20,4 @@ class GreenrApplicationTests {
 //	{
 //		assertEquals("Success", ProfileController.sendEmail(email));
 //	}
-//commented out test due to clashing types
 }
