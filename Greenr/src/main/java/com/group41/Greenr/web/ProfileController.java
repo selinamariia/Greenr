@@ -65,6 +65,7 @@ public class ProfileController {
     public String saveUser(@ModelAttribute("user") User user, Principal principal) throws AddressException, MessagingException, IOException 
 	{
         userServiceImplement.saveuser(user);
+        //get user information
 	    String email = principal.getName();
 		sendEmail(email);
 	    return "redirect:/profile";
@@ -74,11 +75,15 @@ public class ProfileController {
         SimpleMailMessage msg = new SimpleMailMessage();
         //this needs to be replaced with the users email that needs to be acc
         msg.setTo(email);
+        //subject text of email
         msg.setSubject("Greenr Profile Changes Saved");
+        
+        //body text of email
         msg.setText("Hello! Your profile has been changed on Greenr. To view changes please login to your account. -Greenr Team");
 
         javaMailSender.send(msg);
         
+        //for testing purposes
         return "Success";
     }
 //	// @PostMapping is used to handle POST type of request method

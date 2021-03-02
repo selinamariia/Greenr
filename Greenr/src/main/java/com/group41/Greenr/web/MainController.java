@@ -99,7 +99,6 @@ public class MainController {
 	public String aqi() {
 		return "aqi_location_rating";
 	}
-	
 
 	
 	@GetMapping("/welcome-screen") 
