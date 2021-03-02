@@ -106,6 +106,11 @@ public class MainController {
 		return "welcome-screen";
 	}
 	
+	@GetMapping("/error")
+	public String error()
+	{
+		return "error";
+	}
 	@RequestMapping("/deletebyuser")
     public String currentLoggedInUsername(Principal principal) {
         String email = principal.getName();
