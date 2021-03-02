@@ -3,3 +3,8 @@
     overflow-x: hidden;
     background-size: cover;
 }
+.search
+{
+	text-align: center;
+	padding-bottom: 25px;
+}
