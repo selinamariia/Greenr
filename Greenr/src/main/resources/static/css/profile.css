@@ -112,8 +112,9 @@ p
 {
     position: relative;
     left: -500px;
-    bottom: -250px;
+    bottom: -150px;
     width: 400px;
+    padding-top: 5%;
     margin: auto;
     background: #fff;
     box-shadow: 0 4px 10px 0 rgba(0,0,0,0.5);
@@ -122,7 +123,7 @@ p
 {
     position: relative;
     left: 500px;
-    bottom: 650px;
+    bottom: 850px;
     width: 400px;
     margin: auto;
     background: #fff;
@@ -174,7 +175,7 @@ body:before {
     position: absolute;
     top: 0;
     left: 0;
-    background: #128ff2;
+
     content: "";
     z-index: 0;
 }
@@ -212,6 +213,8 @@ button {
     transition: all 0.2s ease-in-out;
     cursor: pointer;
     min-height: 38px;
+    text-align: center;
+    color: #128ff2;
 }
 
 button.primary {
