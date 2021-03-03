@@ -43,42 +43,42 @@
                 </a>
             </div>
             
-            <div class="title">
+         <!--    <div class="title">
                 <h1>My Profile</h1>
 				<form action="#" th:action="@{/save}" th:object="${userprofile}"
               		method="post">
-                	<h2>Edit Details</h2>
+                	<h2>Edit Details</h2> -->
 
-                	<h3 class = >User ID</h3>
-                	<input type="text" th:field="*{id}" readonly="readonly" />
+                	<!-- <h3 class = >User ID</h3>
+                	<input type="text" th:field="*{id}" readonly="readonly" /> -->
 
-                	<h3 class = >Username</h3>
-                	<input type="text" th:field="*{username}" />
+                	<!-- <h3 class = >Username</h3>
+                	<input type="text" th:field="*{username}" /> -->
 
-                	<h3 class = >First name</h3>
+<!--                 	<h3 class = >First name</h3>
                 	<input type="text" th:field="*{firstName}" />
 
                 	<h3 class = "First">Last name</h3>
-                	<input type="text" th:field="*{lastName}" />
+                	<input type="text" th:field="*{lastName}" /> -->
 
-                	<input type="hidden" th:field="*{password}" readonly="readonly" />
+                	<!-- <input type="hidden" th:field="*{password}" readonly="readonly" /> -->
 
-                	<h3 class = "First">Date Of Birth</h3>
-                	<input type="text" th:field="*{DoB}" />
-					  
+                	<!-- <h3 class = "First">Date Of Birth</h3>
+                	<input type="text" th:field="*{DoB}" /> -->
+					<!--   
                 	<h3 class = "First">Email Address</h3>
                 	<input type="email" th:field="*{email}" readonly="readonly" />  
-                	<br>
-                	<button class="btn" type="submit">Apply changes</button>            	 
-                	
-                    <th:block th:each="role : ${listRoles}">
+                	<br> -->
+<!--                 	<button class="btn" type="submit">Apply changes</button>            	 
+ -->                	
+<!--                     <th:block th:each="role : ${listRoles}">
                     <div>
                     <input type="hidden" th:field="*{roles}" th:text="${role.name}" th:value="${role.id}"  />
                     </div>
                     </th:block>
-                    
-                    
-				</form>
+ -->                    
+<!--                     
+				</form> -->
 
             </div>
 
@@ -90,13 +90,40 @@
                     <div class="profile-title">
                         <h3>John Doe</h3>
                     </div>
+                    <input type="hidden" th:field="*{userprofile.id}" />
                  </div>
                     <div class="main-container">
-
                         <p><i class="fas fa-briefcase"></i> Short Description</p>
-                        <p> London, England</p>
-                        <p> JohnDoe@Johnny.com</p>
-                        <p> +44 1234556678</p>
+                        <p>
+                        <table border="0">
+                        <tr>
+                        	<td class = "p">Location: </td>
+                        	<td class = "p">London, England</td>
+                        </tr>
+                        <tr>
+                        	<td class = "p">Username: </td>
+                        	<td class = "p" th:text="*{userprofile.username}"/>
+                        </tr>
+                        <tr>
+                        	<td class = "p">Email Address:</td>
+                        	<td class = "p" th:text="*{userprofile.email}"/>
+                        </tr>
+                        <tr>
+                        	<td class = "p">First Name:</td>
+                        	<td class = "p" th:text="*{userprofile.firstName}"/>
+                        </tr>
+                        <tr>
+                        	<td class = "p">Surname:</td>
+                        	<td class = "p" th:text="*{userprofile.lastName}"/>
+                        </tr>
+                        <tr>
+                        	<td class = "p">Date of Birth: </td>
+                        	<td class = "p" th:text="*{userprofile.DoB}"/>
+                        </tr>
+                        </table>
+                         
+                         </p>
+                  <!--  --></form>
 				<form class="textbox" th:action="@{/deletebyuser}" method="POST">
 					<input type="submit" name="button1" value="Delete Account">
 				</form>
