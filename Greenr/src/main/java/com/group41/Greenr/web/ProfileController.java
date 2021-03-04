@@ -67,10 +67,11 @@ public class ProfileController {
 	{
 		User userObj = userRepo.findById(user.id).get();
 		userObj.setFirstName(user.getFirstName());
+		userObj.setLastName(user.getLastName());
         userServiceImplement.saveuser(userObj);
         //get user information
 	    String email = principal.getName();
-		sendEmail(email);
+		//sendEmail(email);
 	    return "redirect:/profile";
 	}
 	

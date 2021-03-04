@@ -113,11 +113,11 @@
                         </tr>
                         <tr>
                         	<td class = "p">First Name:</td>
-                        	<td class = "p"><input type="text" th:field="*{userprofile.lastName}" /> </td>
+                        	<td class = "p"><input type="text" th:field="*{userprofile.firstName}" /> </td>
                         </tr>
                         <tr>
                         	<td class = "p">Surname:</td>
-                        	<td class = "p" th:text="*{userprofile.lastName}"/>
+                        	<td class = "p"><input type="text" th:field="*{userprofile.lastName}" /> </td>
                         </tr>
                         <tr>
                         	<td class = "p">Date of Birth: </td>
@@ -127,7 +127,7 @@
                         <td colspan="2"> <button type = "submit" class="primary submit-btn">Update</button></td>
                         </tr>
                         </table>
-                         
+                         <img th:src="*{userprofile.phototsImagePath}"/>
                          </p>
                   </form>
 				<form class="textbox" th:action="@{/deletebyuser}" method="POST">
