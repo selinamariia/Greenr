@@ -9,6 +9,7 @@ import com.group41.Greenr.web.dto.PostRepository;
 import com.group41.Greenr.model.Post;
 import java.util.Base64;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class PostService {
@@ -36,7 +37,11 @@ public class PostService {
     public List<Post> getAllPosts() {
         return postRepo.findAll();
     }
-
+    
+    public List<Post> findAll(Optional<String> postName) {
+        return postRepo.findByName(postName);
+    }
+    
     public void deletePostById(Long id) {
         postRepo.deleteById(id);
     }

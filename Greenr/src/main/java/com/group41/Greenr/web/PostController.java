@@ -9,14 +9,16 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import java.util.List;
+import java.util.Optional;
 import com.group41.Greenr.model.Post;
 import com.group41.Greenr.service.PostService;
+
 
 @Controller
 public class PostController {
     @Autowired
     private PostService postService;
-
+        
     @GetMapping("/listPosts.html")
     public String showPosts(Model model) {
         List<Post> posts = postService.getAllPosts();
@@ -27,6 +29,13 @@ public class PostController {
     @GetMapping("/newPost.html")
     public String showNewPost() {
         return "/newPost.html";
+    }
+    
+    @GetMapping("/search")
+    public String findAll(@RequestParam Optional<String> postName)
+    {
+    	postService.findAll(postName);
+    	return "redirect:/listPosts.html";
     }
 
     @PostMapping("/addPost")
