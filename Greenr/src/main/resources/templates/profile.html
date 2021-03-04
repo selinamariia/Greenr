@@ -90,9 +90,12 @@
                     <div class="profile-title">
                         <h3>John Doe</h3>
                     </div>
-                    <input type="hidden" th:field="*{userprofile.id}" />
+                   
                  </div>
+                 <form action="#" th:action="@{/save}"
+              		method="post">
                     <div class="main-container">
+                     <input type="hidden" th:field="*{userprofile.id}" />
                         <p><i class="fas fa-briefcase"></i> Short Description</p>
                         <p>
                         <table border="0">
@@ -110,7 +113,7 @@
                         </tr>
                         <tr>
                         	<td class = "p">First Name:</td>
-                        	<td class = "p" th:text="*{userprofile.firstName}"/>
+                        	<td class = "p"><input type="text" th:field="*{userprofile.lastName}" /> </td>
                         </tr>
                         <tr>
                         	<td class = "p">Surname:</td>
@@ -120,10 +123,13 @@
                         	<td class = "p">Date of Birth: </td>
                         	<td class = "p" th:text="*{userprofile.DoB}"/>
                         </tr>
+                        <tr>
+                        <td colspan="2"> <button type = "submit" class="primary submit-btn">Update</button></td>
+                        </tr>
                         </table>
                          
                          </p>
-                  <!--  --></form>
+                  </form>
 				<form class="textbox" th:action="@{/deletebyuser}" method="POST">
 					<input type="submit" name="button1" value="Delete Account">
 				</form>

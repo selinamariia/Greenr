@@ -2,6 +2,7 @@ package com.group41.Greenr.web;
 
 import java.io.IOException;
 import java.security.Principal;
+import java.util.Optional;
 
 import javax.mail.MessagingException;
 import javax.mail.internet.AddressException;
@@ -64,7 +65,9 @@ public class ProfileController {
 	@PostMapping("/save")
     public String saveUser(@ModelAttribute("user") User user, Principal principal) throws AddressException, MessagingException, IOException 
 	{
-        userServiceImplement.saveuser(user);
+		User userObj = userRepo.findById(user.id).get();
+		userObj.setFirstName(user.getFirstName());
+        userServiceImplement.saveuser(userObj);
         //get user information
 	    String email = principal.getName();
 		sendEmail(email);
