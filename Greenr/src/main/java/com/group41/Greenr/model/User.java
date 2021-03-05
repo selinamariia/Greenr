@@ -158,7 +158,8 @@ public class User {
 		if (fileName == null || id == null) {
 			return null;
 		}
-		return "/user-photos/" + id + "/" + fileName;
+		return "./img/profile/" + id +".jpg";
+//		return "/user-photos/" + id + "/" + fileName;
 	}
 	
 }

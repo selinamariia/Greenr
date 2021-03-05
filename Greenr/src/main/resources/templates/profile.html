@@ -49,9 +49,9 @@
                 <div class="image-container">
                 	<!-- <img th:src="@{/user-photos/4/image.jpg}" /> -->
                 	<!-- <img th:src="@{${user.id}}"/> -->
-                    <img src="./img/blankprofile.jpg" style="width: 100%">
-                    <div class="profile-title">
-                        <h3>John Doe</h3>
+                	<img th:src="*{userprofile.phototsImagePath}" style="width: 100%"/>
+	                    <div class="profile-title">
+                        <h3><td class = "p" th:text="*{userprofile.firstName} + ' ' + *{userprofile.lastName}"/></h3>
                     </div>
                    
                  </div>
@@ -90,7 +90,8 @@
                         <td colspan="2"> <button type = "submit" class="primary submit-btn">Update</button></td>
                         </tr>
                         </table>
-                          <img th:src="*{userprofile.phototsImagePath}"/>
+                        
+
 
                          </p>
                   </form>

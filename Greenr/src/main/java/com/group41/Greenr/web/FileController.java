@@ -1,5 +1,7 @@
 package com.group41.Greenr.web;
 
+import java.nio.file.FileSystems;
+
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,6 +28,7 @@ public class FileController {
 	public UploadFileResponse uploadFile(@RequestParam("file") MultipartFile file, HttpSession session) throws Exception {
 	
 		String fileName = StringUtils.cleanPath(file.getOriginalFilename());
+	
 		if (fileName.contains("..")) {
 			throw new Exception("Sorry! Filename contains invalid path sequence " + fileName);
 		}
@@ -34,7 +37,8 @@ public class FileController {
 		user.setFileName(fileName);
 		user.setFileType(file.getContentType());
 		user.setData(file.getBytes());
-		
+		String extension = fileName.substring(fileName.indexOf('.'));
+		fileName = user.getId() + extension;
 		userRepo.save(user);
 		String fileDownlaodUri = ServletUriComponentsBuilder.fromCurrentContextPath()
 				.path("/downloadFile/")
@@ -42,7 +46,9 @@ public class FileController {
 				.toUriString();
 		
 		String uploadDir = "user-photos/" + user.getId();
-		FileUploadUtil.saveFile(uploadDir, fileName, file);
+		String userDirectory = FileSystems.getDefault().getPath("").toAbsolutePath().toString() + "/src/main/resources/static/img/profile";
+		FileUploadUtil.saveFile(userDirectory, fileName, file);
+		
 		return new UploadFileResponse(user.getFileName(), fileDownlaodUri, file.getContentType(), file.getSize());
 		//return "profile";
 	}
