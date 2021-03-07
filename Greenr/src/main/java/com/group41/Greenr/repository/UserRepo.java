@@ -8,5 +8,4 @@ import com.group41.Greenr.model.User;
 @Repository
 public interface UserRepo extends JpaRepository<User, Long>{
 	User findByEmail(String email); // 'findByEmail' retrieves user from database by email - is the method naming convention for spring data
-	User findByUsername(String username);
 }

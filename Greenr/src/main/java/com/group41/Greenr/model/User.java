@@ -14,16 +14,17 @@ import javax.persistence.JoinTable;
 import javax.persistence.Lob;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
-import javax.persistence.Transient;
 import javax.persistence.UniqueConstraint;
 
 @Entity
-@Table(name = "User", uniqueConstraints = @UniqueConstraint(columnNames = "email")) // @UniqueConstraint annotation is for annotating multiple unique keys
+@Table(name = "User", uniqueConstraints = @UniqueConstraint(columnNames = "email")) // @UniqueConstraint annotation is
+																					// for annotating multiple unique
+																					// keys
 public class User {
-		
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	public Long id;	
+	public Long id;
 	@Column(name = "first_name")
 	private String firstName;
 	@Column(name = "last_name")
@@ -32,25 +33,17 @@ public class User {
 	private String email;
 	private String password;
 	private String DoB;
-	@Column(name="file_name")
-	private String fileName;
-	@Column(name="file_type")
-	private String fileType;
-	
+
 	@Lob
-	private byte[] data;
-	
+	@Column(columnDefinition = "MEDIUMBLOB")
+	private String image;
+
 	@ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-	@JoinTable(
-			name = "user_roles",
-			joinColumns = @JoinColumn(
-					name = "user_id", referencedColumnName = "id"),
-			inverseJoinColumns = @JoinColumn(
-					name = "role_id", referencedColumnName = "id"))
-			
+	@JoinTable(name = "user_roles", joinColumns = @JoinColumn(name = "user_id", referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(name = "role_id", referencedColumnName = "id"))
+
 	private Collection<Role> roles;
-	
-	public User(String firstName, String lastName, String username ,String email, String password, String DoB,
+
+	public User(String firstName, String lastName, String username, String email, String password, String DoB,
 			Collection<Role> roles) {
 		super();
 		this.firstName = firstName;
@@ -85,7 +78,7 @@ public class User {
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
-	
+
 	public String getUsername() {
 		return username;
 	}
@@ -124,42 +117,19 @@ public class User {
 
 	public void setRoles(Collection<Role> roles) {
 		this.roles = roles;
-	}	
-	
-	public String getFileName() {
-		return this.fileName;
 	}
-	
-	public void setFileName(String fileName) {
-		this.fileName = fileName;
-	}
+
 	public User() {
-		
+
 	}
 
-	public String getFileType() {
-		return fileType;
+
+	public String getImage() {
+		return image;
 	}
 
-	public void setFileType(String fileType) {
-		this.fileType = fileType;
+	public void setImage(String image) {
+		this.image = image;
 	}
 
-	public byte[] getData() {
-		return data;
-	}
-
-	public void setData(byte[] data) {
-		this.data = data;
-	}
-	
-	@Transient
-	public String getPhototsImagePath() {
-		if (fileName == null || id == null) {
-			return null;
-		}
-		return "./img/profile/" + id +".jpg";
-//		return "/user-photos/" + id + "/" + fileName;
-	}
-	
 }

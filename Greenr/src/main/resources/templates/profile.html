@@ -49,7 +49,9 @@
                 <div class="image-container">
                 	<!-- <img th:src="@{/user-photos/4/image.jpg}" /> -->
                 	<!-- <img th:src="@{${user.id}}"/> -->
-                	<img th:src="*{userprofile.phototsImagePath}" style="width: 100%"/>
+                	<img alt="" th:src="*{'data:image/jpeg;base64,'+{userprofile.image}}"
+								style="width: 100%;">
+					
 	                    <div class="profile-title">
                         <h3><td class = "p" th:text="*{userprofile.firstName} + ' ' + *{userprofile.lastName}"/></h3>
                     </div>
@@ -98,15 +100,12 @@
 				<form class="textbox" th:action="@{/deletebyuser}" method="POST">
 					<input type="submit" name="button1" value="Delete Account">
 				</form>
-				
-				<form id = "singleUploadForm" name="singleUploadForm">
-						<input id="singleFileUploadInput" type="file" name="file" accept="image/png, image/jpeg" class="file-input" required/>
+				<form th:action="@{/uploadFile}" method="Post" enctype="multipart/form-data">
+				     <label for="formFile" class="form-label">Upload your photo</label>
+                    <input class="form-control" type="file" name="file" id="formFile" accept="image/png, image/jpeg" required/>
 						<button type = "submit" class="primary submit-btn">Upload Photo</button>
-				</form>
-				<div class="upload-response">
-					<div id="singleFileUploadError"></div>
-					<div id="singleFileUploadSuccess"></div>
-				</div>
+				</form>				
+				
 				        <hr>
                         <h3><b>Recently Spotted</b></h3>
                         <p> Alex Shaw</p>
