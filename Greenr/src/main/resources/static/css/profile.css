@@ -1,3 +1,9 @@
+.banner-wrap{
+    background: url(../img/beach.jpeg) 0 0 no-repeat;
+    overflow-x: hidden;
+    background-size: 3000px 1515px
+}
+  
 body
 {
     background-color: #fff9f8;
