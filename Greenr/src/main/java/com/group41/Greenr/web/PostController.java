@@ -12,17 +12,19 @@ import java.util.List;
 import java.util.Optional;
 import com.group41.Greenr.model.Post;
 import com.group41.Greenr.service.PostService;
+import com.group41.Greenr.web.dto.PostRepository;
 
 
 @Controller
 public class PostController {
     @Autowired
     private PostService postService;
-        
+    private String searchField;
     @GetMapping("/listPosts.html")
     public String showPosts(Model model) {
-        List<Post> posts = postService.getAllPosts();
-        model.addAttribute("posts", posts);
+
+            List<Post> posts = postService.getAllPosts();
+            model.addAttribute("posts", posts);
         return "/listPosts.html";
     }
 
@@ -31,16 +33,33 @@ public class PostController {
         return "/newPost.html";
     }
     
-    @GetMapping("/search")
-    public String findAll(@RequestParam Optional<String> postName)
+    @GetMapping("/searchResults.html")
+    public String showResults(Model model) 
     {
-    	postService.findAll(postName);
-    	return "redirect:/listPosts.html";
+    		List<Post> list = postService.findAll(searchField);
+            model.addAttribute("posts", list);
+        return "searchResults.html";
+    }
+    
+    @GetMapping("/search")
+    public String findAll(@RequestParam("search") String PostName, Model model)
+    {
+    	searchField = PostName;
+    	System.out.println(PostName);
+    	List<Post> list = postService.findAll(PostName);
+        model.addAttribute("posts", list);
+    	for(Post el:list)
+    	{
+    		System.out.println(el.getPostName());
+    	}
+    	return "redirect:/searchResults.html";
     }
 
+    
     @PostMapping("/addPost")
     public String savePost(@RequestParam("file") MultipartFile file, @RequestParam("p_title") String PostName,
-            @RequestParam("p_desc") String PostDesc) {
+            @RequestParam("p_desc") String PostDesc) 
+    {
         postService.savePostToDB(file, PostName, PostDesc);
         return "redirect:/listPosts.html";
     }

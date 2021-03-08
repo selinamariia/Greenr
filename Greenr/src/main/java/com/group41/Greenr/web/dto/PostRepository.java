@@ -13,6 +13,5 @@ import com.group41.Greenr.model.Post;
 public interface PostRepository extends JpaRepository<Post, Long> {
 
 	@Query("select p from Post p where postName like %?1%")
-	List<Post> findByName(Optional<String> postName);
-
+	List<Post> findByName(String postName);
 }

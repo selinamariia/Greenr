@@ -38,7 +38,8 @@ public class PostService {
         return postRepo.findAll();
     }
     
-    public List<Post> findAll(Optional<String> postName) {
+    public List<Post> findAll(String postName) {
+//    	System.out.print("hi1");
         return postRepo.findByName(postName);
     }
     

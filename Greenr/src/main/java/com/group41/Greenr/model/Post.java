@@ -50,4 +50,12 @@ public class Post {
     public void setImage(String image) {
         this.image = image;
     }
+
+	@Override
+	public String toString() {
+		return "Post [postID=" + postID + ", postName=" + postName + ", postDesc=" + postDesc + ", image=" + image
+				+ "]";
+	}
+    
+    
 }
