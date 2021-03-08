@@ -40,7 +40,7 @@ public class MainController {
 			return "login";
 		}
 		
-		return "redirect:/registration";
+		return "redirect:/welcome-screen";
 	}
 	
 	@GetMapping("/post")
