@@ -45,13 +45,13 @@ public class PostController {
     public String findAll(@RequestParam("search") String PostName, Model model)
     {
     	searchField = PostName;
-    	System.out.println(PostName);
+//    	System.out.println(PostName);
     	List<Post> list = postService.findAll(PostName);
         model.addAttribute("posts", list);
-    	for(Post el:list)
-    	{
-    		System.out.println(el.getPostName());
-    	}
+//    	for(Post el:list)
+//    	{
+//    		System.out.println(el.getPostName());
+//    	}
     	return "redirect:/searchResults.html";
     }
 
