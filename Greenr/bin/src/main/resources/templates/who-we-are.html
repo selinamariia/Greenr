@@ -16,29 +16,23 @@
     <body>
         <div class="header">
             <div class="navbar">
-                <a th:href="@{/welcome-screen}">
-                    <button class="nav-button">Home</button>
-                </a>
                 <a href="/listPosts.html">
                     <button class="nav-button">Community</button>
                 </a>
                 <a th:href="@{/aqi}">
                     <button class="nav-button">AQI</button>
                 </a>
-                <a th:href="@{/who-we-are}">
-                    <button class="nav-button">About Us</button>
-                </a>
-                <a th:href="@{/contact-us}">
-                    <button class="nav-button">Contact Us</button>
-                </a>
-                <a th:href="@{/faq}">
-                    <button class="nav-button">FAQ</button>
+                <a th:href="@{/newPost}">
+                    <button class="nav-button">Create A Post</button>
                 </a>
                 <a th:href="@{/profile}">
                     <button class="nav-button">Your Profile</button>
                 </a>
-                <a th:href="@{/newPost}">
-                    <button class="nav-button">Create Post</button>
+                                <a th:href="@{/who-we-are}">
+                    <button class="nav-button">About Us</button>
+                </a>
+                <a th:href="@{/contact-us}">
+                    <button class="nav-button">Contact Us</button>
                 </a>
                 <a th:href="@{/logout}">
                     <button class="nav-button">Logout</button>
@@ -63,7 +57,6 @@
                         pollution within an area.
                     </p>
                 </div>
-            </div>
             <div class="title">
                 <h1>Frequently Asked Questions</h1>
             </div>
@@ -83,6 +76,7 @@
                     <h3>I've made a post, now what?</h3>
                     <p>Now it's time to wait for other users to respond to your post, we will notify you when they do!</p>
                 </div>
+            </div>
             </div>
         </div>   
     </body>
