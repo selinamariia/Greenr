@@ -1,4 +1,4 @@
-package TestIP;
+package com.group41.Greenr.TestIP;
 import java.io.IOException;
 import java.net.InetAddress;
 

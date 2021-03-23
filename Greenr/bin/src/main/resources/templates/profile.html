@@ -67,7 +67,7 @@
                         </tr>
                         <tr>
                         	<td class = "p">Username: </td>
-                        	<td class = "p" th:text="*{userprofile.username}"/>
+                        	<td class = "p"> <input type="text" th:field="*{userprofile.username}" /> </td>
                         </tr>
                         <tr>
                         	<td class = "p">Email Address:</td>
@@ -86,7 +86,7 @@
                         	<td class = "p" th:text="*{userprofile.DoB}"/>
                         </tr>
                         <tr>
-                        <td colspan="2"> <button type = "submit" class="primary submit-btn">Update</button></td>
+                        <td colspan="2"> <button type = "submit" class="primary submit-btn" >Update</button></td>
                         </tr>
                         </table>
                         
