@@ -66,3 +66,18 @@ form .submit:hover{
     cursor: pointer;
 }
 
+.img1{
+  	float: left;
+}
+
+.img2{
+	float: right;
+}
+
+.RegularQuestions{
+	border: 1px
+	solid black
+	font-family "Garmond", "Times", "Serif";
+	font-size: 14px;
+}
+
