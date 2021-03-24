@@ -11,45 +11,42 @@
 
 <body class="banner-wrap">
     <div class="col-12">
-      <nav class="navbar navbar-expand-sm navbar-light" style="background-color: #e3f2fd">
-        <ul class="navbar-nav">
-          <li class="nav-item" style="padding-left: 20px;">
-					<a class="nav-link font-weight-bold me-5" href="/listPosts.html">Community</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link font-weight-bold me-5" th:href="@{/aqi}">AQI</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link font-weight-bold me-5" th:href="@{/who-we-are}">About Us</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link font-weight-bold me-5" th:href="@{/contact-us}">Contact Us</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link font-weight-bold me-5" th:href="@{/newPost}">Create Post</a>
-				</li>
-				<li class="nav-item" style="padding-right: 1000px;"> </li>
-				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-bs-toggle="dropdown"
-						aria-haspopup="true" aria-expanded="false">
-						Account
-					</a>
-					<div class="dropdown-menu" style="right: 0;left: auto;" aria-labelledby="navbarDropdownMenuLink">
-						<a class="dropdown-item" th:href="@{/profile}">Your Profile</a>
-						<a class="dropdown-item" th:href="@{/logout}">Logout</a>
-					</div>
-				</li>
-			</ul>
-		</nav>
+		<div class="header">
+            <div class="navbar">
+                <a href="/listPosts.html">
+                    <button class="nav-button">Community</button>
+                </a>
+                <a th:href="@{/aqi}">
+                    <button class="nav-button">AQI</button>
+                </a>
+                <a th:href="@{/who-we-are}">
+                    <button class="nav-button">About Us</button>
+                </a>
+                <a th:href="@{/contact-us}">
+                    <button class="nav-button">Contact Us</button>
+                </a>
+                <a th:href="@{/profile}">
+                    <button class="nav-button">Your Profile</button>
+                </a>
+                <a th:href="@{/newPost}">
+                    <button class="nav-button">Create Post</button>
+                </a>
+                <a th:href="@{/logout}">
+                    <button class="nav-button">Logout</button>
+                </a>
+            </div>
 		<hr style="height:2px;color:white;background-color:white;">
-		<h3 class="text-center" style="color: white;">Community posts</h3>
+		<h3 class="text-center">Community posts</h3>
 		<hr style="height:2px;color:white;background-color:white;">
 		<form class="row g-3 justify-content-center" th:action="@{/search}" method="get">
 			<div class="col-auto">
 			  <input type="text" class="form-control" name="search" placeholder="Search posts by title...">
 			</div>
 			<div class="col-auto">
-			  <button class="btn btn-success" type="submit">Search</button>
+			<div id="search">
+						  <button class="btn btn-success" type="submit">Search</button>
+			
+			</div>
 			</div>
 		  </form>
 		<br>
