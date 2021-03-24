@@ -90,6 +90,18 @@ public class ProfileController {
         //for testing purposes
 //        return "Success";
     }
+	
+	public static int emailSender(String email)
+	{
+		if(email.contains("@"))
+		{
+			return 1;
+		}
+		else
+		{
+			return -1;
+		}
+	}
 //	// @PostMapping is used to handle POST type of request method
 //	@PostMapping
 //	public String registerUserAccount(@ModelAttribute("user") UserRegistrationDto registrationDto) {

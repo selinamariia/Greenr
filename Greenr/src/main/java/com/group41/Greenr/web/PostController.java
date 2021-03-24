@@ -36,8 +36,8 @@ public class PostController {
     @GetMapping("/searchResults.html")
     public String showResults(Model model) 
     {
-    		List<Post> list = postService.findAll(searchField);
-            model.addAttribute("posts", list);
+    	List<Post> list = postService.findAll(searchField);
+        model.addAttribute("posts", list);
         return "searchResults.html";
     }
     
