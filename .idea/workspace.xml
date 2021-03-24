@@ -25,10 +25,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="caf986fc-4a65-4e04-aab6-79fa84ee1734" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Greenr/src/main/java/com/group41/Greenr/model/EmailApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Greenr/src/main/java/com/group41/Greenr/model/EmailApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Greenr/src/main/java/com/group41/Greenr/web/EmailController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Greenr/src/main/java/com/group41/Greenr/web/EmailController.java" afterDir="false" />
-    </list>
+    <list default="true" id="caf986fc-4a65-4e04-aab6-79fa84ee1734" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -94,6 +91,7 @@
       <workItem from="1614192692516" duration="1642000" />
       <workItem from="1614252059949" duration="1467000" />
       <workItem from="1614338976495" duration="192000" />
+      <workItem from="1616571002869" duration="408000" />
     </task>
     <task id="LOCAL-00001" summary="Added contact-us.html and contact-us.css">
       <created>1613051175553</created>
