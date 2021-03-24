@@ -48,8 +48,8 @@ p
 #text
 {
     position: absolute;
-    top: 35%;
-    left: 55%;
+    top: 25%;
+    left: 50%;
     right: 5%;
 }
 #images
@@ -61,16 +61,25 @@ p
 {
     margin-left: none;
     padding-right: 17px;
+        height: 500px;
+    width: auto;
 }
 #img2
 {
     padding-right: 17px;
+            height: 500px;
+    width: auto;
+}
+#img3
+{
+	        height: 500px;
+    width: auto;
 }
 .title
 {
     position: absolute;
     margin-left: 32%;
-    margin-top: 2%;
+    margin-top: 0%;
 }
 h3
 {
@@ -98,7 +107,7 @@ p
 #section1
 {
     position: absolute;
-    margin-top: 10%;
+    margin-top: 7%;
     left: 7%;
     margin-right: 70%;
 }
@@ -113,7 +122,7 @@ p
 #section2
 {
     position: absolute;
-    margin-top: 10%;
+    margin-top: 7%;
     margin-right: 38%;
     left: 39%;
 }
@@ -128,7 +137,7 @@ p
 #section3
 {
     position: absolute;
-    margin-top: 10%;
+    margin-top: 7%;
     margin-right: 7%;
     left: 70%;
 }
